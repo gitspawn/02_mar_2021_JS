@@ -1,0 +1,7 @@
+- Что такое Internet. Клиент. Сервер.
+- URL, URN, URI
+- Data Propocols
+- Status Codes
+- REST
+- DevTools
+- Git

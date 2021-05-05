@@ -1,0 +1,301 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: green;
+  font-weight: 600;
+}
+
+a:hover {
+  color: blueviolet;
+}
+
+a:active {
+  color: black;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+a:visited {
+  color: chocolate;
+}
+
+.button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 600;
+}
+
+.button:hover {
+  background-color: gray;
+  color: black;
+}
+
+/* h1 {
+  color: darkslategray;
+  text-decoration: underline;
+  display: none;
+  display: block;
+  display: inline-block;
+} */
+
+/* h1 {
+  color: red;
+  text-decoration: none;
+  display: inline-block;
+  display: flex;
+  background-color: darkviolet;
+  color: white;
+}
+
+p {
+  color: yellow;
+  line-height: 1.2em;
+} */
+
+/* body {
+  background-color: darkviolet;
+  color: white;
+} */
+
+/* 
+LDKfgndlfknh
+sMFV.xfbmvnx
+
+*/
+
+/* p {
+}
+
+#main-header {
+  background: green;
+} */
+
+/* 1 */
+/* h1 {
+  color: blue;
+} */
+
+/* 10000 */
+/* h1 {
+  color: blue !important;
+} */
+
+/* 100 */
+/* #main-heading {
+  color: green;
+} */
+
+/* 10 */
+/* .box-1,
+.box-2 {
+  color: red;
+} */
+
+/* h1.box-2 {
+  color: orange;
+}
+
+h1.box-2 + .text-content {
+  color: orange;
+} */
+
+h1.box-1 {
+  /* background-color: green; */
+  color: black;
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  font-weight: bold;
+  font-family: 'DotGothic16', sans-serif;
+}
+
+h1.box-1 + .text-content {
+  /* border: 3px solid green; */
+  /* border-radius: 20px; */
+}
+
+h1.box-2 + .text-content {
+  /* font-weight: 600;
+  font-style: italic; */
+  /* font-family: Akaya Telivigala; */
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  /* line-height: 2em; */
+  /* text-align: center; */
+
+  /* letter-spacing: 0.2em;
+  word-spacing: 3em; */
+
+  /* border: 3px solid green; */
+  /* margin: 50px 20px 10px 5px;
+  margin: 50px 20px 10px;
+  margin: 50px 20px;
+  margin: 50px;
+
+  padding: 50px 20px 10px 5px;
+  padding: 50px 20px 10px;
+  padding: 50px 20px;
+  padding: 50px; */
+  /* padding: 5%; */
+
+  /* margin-top: ;
+  margin-left: ;
+  margin-bottom: ;
+  margin-right: ;
+
+  padding-left: ;
+  padding-top: ; */
+
+  /* margin: 50px auto; */
+
+  /* border-right: 3px solid violet;
+  border-bottom: 10px double black;
+  margin: 0 15px 0 0; */
+  margin: 20px;
+  border: 3px solid rebeccapurple;
+  /* border-radius: 15px; */
+  border-radius: 0 15px 0 15px;
+}
+
+.categories {
+  border: 1px solid black;
+  padding: 20px;
+  margin: 50px 0;
+  text-align: justify;
+}
+
+.categories h3 {
+  text-align: center;
+}
+
+.categories ul {
+  /* list-style: square; */
+  list-style: none;
+  padding-left: 30px;
+}
+
+.categories li {
+  border-bottom: 1px dashed gray;
+  /* list-style-image: url(./images/1024px-Light_green_check.svg.png); */
+}
+
+.test-form {
+  padding: 20px;
+  margin: 5px;
+}
+
+.test-form .form-group {
+  padding-bottom: 20px;
+}
+
+/* .test-form input, */
+.test-form input[type='text'],
+.test-form input[type='email'],
+.test-form input[type='number'],
+.test-form textarea {
+  width: 100%;
+}
+
+/* .test-form input[type='submit'] {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 600;
+} */
+
+.block {
+  float: left;
+  width: 33.3%;
+  padding: 10px;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+
+#content {
+  float: left;
+  width: 80%;
+  margin-top: 20px;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+#sidebar {
+  float: right;
+  width: 20%;
+  margin-top: 20px;
+  padding: 15px;
+  box-sizing: border-box;
+  background-color: black;
+  color: white;
+}
+
+.clr {
+  clear: both;
+}
+
+.p-box {
+  border: 1px solid green;
+  width: 600px;
+  height: 450px;
+  margin-top: 50px;
+  position: relative;
+}
+
+.p-box h1 {
+  position: absolute;
+  top: 400px;
+  left: 350px;
+}
+
+.p-box h2 {
+  position: absolute;
+  top: 200px;
+  left: 150px;
+}
+
+.p-fixed {
+  position: fixed;
+  top: 250px;
+}
+
+.categories ul {
+  display: flex;
+  /* display: grid; */
+}
+
+.list {
+  margin-top: 100px;
+}
+
+.list li:first-child {
+  color: red;
+}
+
+.list li:last-child {
+  color: green;
+}
+
+/* .list li:nth-child(even) {
+  background-color: gray;
+} */
+
+/* .list li:nth-child(odd) {
+  background-color: gray;
+}
+
+.list li:nth-child(5) {
+  background-color: yellow;
+} */
+/* 
+.list li:nth-child(3n) {
+  background-color: gray;
+} */

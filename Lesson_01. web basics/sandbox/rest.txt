@@ -1,0 +1,23 @@
+REST
+
+https://www.youtube.com/watch?v=7&lang=eng&range=100&title=cartoone
+
+HTTP 
+Headers
+Query string
+Request BODY
+
+
+HTTP Methods
+POST
+GET
+PUT (PATCH)
+DELETE
+
+
+cache-control: max-age=43200
+content-type: application/json; charset=utf-8
+
+
+Server: 
+php <-> REST <-> MySql

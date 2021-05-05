@@ -1,0 +1,15 @@
+// Hyper Text Transfer Protocol 
+http
+https
+
+// secure
+SSL
+SSH
+
+
+TCP / IP
+
+POP
+SMTP
+
+FTP

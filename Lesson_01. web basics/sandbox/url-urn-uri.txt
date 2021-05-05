@@ -1,0 +1,34 @@
+URL
+https://www.youtube.com/  // DNS
+          =
+https://124.45.134 // IP
+
+https://www.yahoo.com/
+https://234.23.255
+
+https://translate.google.ru/
+
+
+URN (query string)
+/watch?v=XzVWKY_Ebqk
+/useful/online-photo-editor.html
+/ru/language.basic-syntax.phpmode.php/
+
+
+/?sl=en&tl=ru&text=react%0A&op=translate
+/?sl=en&tl=ru&text=javascript%0A&op=translate
+&
+sl=en
+&
+tl=ru
+&
+text=javascript
+op=translate
+#ewrrewrr
+
+URI = URL + URN
+https://codenamecrud.ru/pages/curriculum
+https://www.youtube.com/watch?v=7aTyrIAu3to
+https://www.youtube.com/watch?v=7aTyrIAu3to#ewrrewrr
+https://www.php.net/manual/ru/language.basic-syntax.phpmode.php
+https://tproger.ru/translations/configure-webpack4/
