@@ -1,0 +1,12 @@
+{
+  "editor.fontSize": 18,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+    "editor.formatOnSave": false,
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.wordWrap": "on",
+    "prettier.singleQuote": true
+}

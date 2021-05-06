@@ -8,30 +8,10 @@ const galleryItems = [
 ];
 
 
-let root = document.querySelector('#root');
-let template = document.querySelector('#gallery').innerHTML;
+let gallery = document.querySelector('#gallery').innerHTML
+let root = document.querySelector('#root')
 
-// console.log(root)
-// console.log(template)
 
-let templateScript = Handlebars.compile(template);
+let templateScript = Handlebars.compile(gallery);
 let markup = templateScript(galleryItems)
-
 root.innerHTML = markup
-
-
-/*
-<template id="gallery">
-      <div class="gallery">
-        <h2 class="gallery-title">Gallery</h2>
-        <div class="gallery-content">
-          {{#each this}}
-          <div class="gallery-item">
-            <img src="{{this.img}}" alt="{{this.text}}" class="gallery-img" />
-            <p class="gallery-text">{{this.text}}</p>
-          </div>
-          {{/each}}
-        </div>
-      </div>
-    </template>
-*/
