@@ -5,14 +5,15 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   plugins: [
-    new MiniCssExtractPlugin({ filename: "main.css" }),
+    new MiniCssExtractPlugin({ filename: "styles.css" }),
     new HtmlWebpackPlugin({ template: "./src/index.html" }),
   ],
   entry: "./src/index.js",
   output: {
-    path: path.join(__dirname, "build"),
+    path: path.resolve(__dirname, "build"),
     filename: "bundle.js",
   },
+
   module: {
     rules: [
       {
@@ -22,49 +23,32 @@ module.exports = {
           loader: "babel-loader",
         },
       },
-      // Css
       {
-        test: /\.css$/i,
+        test: /\.css$/,
         use: [
           "style-loader",
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              esModule: false,
-            },
-          },
+          { loader: MiniCssExtractPlugin.loader, options: { esModule: false } },
           "css-loader",
         ],
       },
-
-      // Sass
       {
         test: /\.s[ac]ss$/i,
         use: [
           "style-loader",
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              esModule: false,
-            },
-          },
+          { loader: MiniCssExtractPlugin.loader, options: { esModule: false } },
           "css-loader",
           "sass-loader",
         ],
       },
-      { test: /\.hbs$/, exclude: /node_modules/, use: "handlebars-loader" }
+      { test: /\.hbs$/, loader: "handlebars-loader" }
     ],
   },
-  // Минификатор
   optimization: {
     minimize: true,
     minimizer: [new CssMinimizerPlugin()],
   },
+
   devServer: {
     open: true,
-    watchOptions: {
-      poll: true,
-      ignored: "/node_modules/",
-    },
   },
 };
