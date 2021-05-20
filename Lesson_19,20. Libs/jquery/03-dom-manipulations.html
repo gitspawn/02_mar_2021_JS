@@ -44,7 +44,7 @@
   <header>Jquery DOM</header>
   <button id="btn1" class="btn">Button_01</button>
   <h1 class="heading1">Heading 1</h1>
-  <p class="paragraph1">
+  <p class="qwe paragraph1">
     jQuery is a fast, small, and feature-rich JavaScript library. It makes
     things like <span>HTML document traversal and manipulation</span>, event
     handling, animation, and Ajax much simpler with an easy-to-use API that
@@ -63,7 +63,10 @@
     Hello world!!!
   </div>
 
+
   <input type="text" name="" id="newListItem">
+
+
   <ul id="list">
     <li>Item 1</li>
     <li>Item 2</li>
@@ -72,12 +75,80 @@
   </ul>
   <hr>
 
+  <!-- // List -->
   <ul id="users"></ul>
+
   <a href="https://google.com">Google</a>
   </div>
 
   <script>
-   
+    $(document).ready(function () {
+      
+      // $('.heading1').css('background-color', 'blue')
+      // $('.heading1').css({
+      //   backgroundColor: 'blue',
+      //   color: 'magenta',
+      //   textDecoration: 'underline'
+      // })
+
+      // $('.paragraph1').addClass('super-class')
+      // $('.paragraph1').removeClass('qwe')
+      // $('.paragraph1').toggleClass('pizza')
+
+
+      // $('#myDiv').text('Valar morghulis')
+      // let thml = '<h1>Valar dohaeris</h1>'
+      
+      // innerHtml
+      // $('#myDiv').html(thml)
+
+        // $('ul#list').append('<li>Item 5 Pizza</li>')
+        // $('ul#list').prepend('<li>Item 0 Kebab</li>')
+
+
+        // $('a[href="https://google.com"]').appendTo('header')
+        // $('.paragraph1').appendTo('header')
+        // $('.paragraph1').appendTo('.paragraph2')
+
+
+        // $('ul#list').before('<h1 class="heading1">New Heading Before</h1>')
+
+        // $('ul#list').after('<h1 class="heading1">New Heading After</h1>')
+
+
+        // Remove elements
+        // $('ul#list').empty()
+        // $('ul#list').detach()
+
+        // Wrap
+        // $('p').wrap('<h4>')
+        // $('p').wrapAll('<h4>')
+
+
+          // Tags
+          // $('a[href="https://google.com"]').attr('target', '_blank')
+          // $('a').attr('target', '_blank')
+          // $('a').removeAttr('href')
+
+
+
+          // Add to collection
+
+          let usersArr = ['Vova', 'Sara', 'Bob', 'Mike']
+          $.each(usersArr, function(index, elem) {
+            // console.log(index)
+            $('#users').append(`<li>${elem}</li>`)
+          })
+
+
+          $('#newListItem').keypress(function(event) {
+            console.log(event.code)
+            if (event.which == 13) {
+              $('ul#list').append(`<li>${event.target.value}</li>`)
+            }
+          })
+    })
+
   </script>
 </body>
 
