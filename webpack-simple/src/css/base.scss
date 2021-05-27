@@ -1,0 +1,12 @@
+$body-color: green;
+$text-color: magenta;
+
+
+body {
+  background-color: $body-color;
+}
+
+
+p {
+  color: $text-color
+}
