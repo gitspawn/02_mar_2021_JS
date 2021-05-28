@@ -44,17 +44,31 @@ class News {
         let url = this.url + this.counter;
 
         console.log(url);
-        fetch(url)
+        return fetch(url)
             .then(res => res.json())
             .then(data => {
                 if (data.response.status === 'ok') {
-                    console.log(data);
-                    this.renderNews(data.response.results);
-                    this.renderPagination(data.response);
+                    return data;
                 }
             })
             .catch(alert);
     }
+
+    // fetchNews() {
+    //     let url = this.url + this.counter;
+
+    //     console.log(url);
+    //      fetch(url)
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             if (data.response.status === 'ok') {
+    //                 console.log(data);
+    //                 this.renderNews(data.response.results);
+    //                 this.renderPagination(data.response);
+    //             }
+    //         })
+    //         .catch(alert);
+    // }
 
 
     renderNews(arrResults) {
@@ -69,6 +83,7 @@ class News {
             li.append(a);
             return li;
         });
+
         this.list.append(...liCollection);
     }
 
@@ -88,34 +103,23 @@ class News {
     };
 
     nextPage() {
-        this.counter += 1;
-        this.fetchNews();
-        this.input.value = this.counter;
+        this.fetchNews().then(data => {
+            this.counter += 1;
+            this.input.value = this.counter;
+            this.renderNews(data.response.results);
+        });
     }
 
-    // prevPage() {
-    //     this.counter -= 1;
-    //     this.fetchNews();
-    //     this.input.value = this.counter;
-    // }
+    prevPage() {
+        this.fetchNews().then(data => {
+            this.counter -= 1;
+            this.input.value = this.counter;
+            this.renderNews(data.response.results);
+        });
 
-    prevPage = () => {
-        this.counter -= 1;
-        this.fetchNews();
-        this.input.value = this.counter;
-    };
+    }
 
-    // inputChange(event) {
-    //     let inputValue = event.target.value;
-    //     this.counter = Number(inputValue);
-
-    //     if (!inputValue) {
-    //         return;
-    //     }
-    //     this.fetchNews();
-    // }
-
-    inputChange = (event) => {
+    inputChange(event) {
         let inputValue = event.target.value;
         this.counter = Number(inputValue);
 
@@ -123,27 +127,29 @@ class News {
             return;
         }
         this.fetchNews();
-    };
-
+    }
 
 
     addListeners() {
         this.nextButton.addEventListener('click', this.nextPage.bind(this));
-        // this.prevButton.addEventListener('click', this.prevPage.bind(this));
-        this.prevButton.addEventListener('click', this.prevPage);
-        // this.input.addEventListener('input', this.inputChange.bind(this));
-        this.input.addEventListener('input', this.inputChange);
+        this.prevButton.addEventListener('click', this.prevPage.bind(this));
+        this.input.addEventListener('input', this.inputChange.bind(this));
         window.addEventListener('load', this.fetchNews.bind(this));
     }
 
     init() {
         this.addListeners();
+        this.fetchNews().then(data => {
+            console.log(data);
+            this.renderNews(data.response.results);
+        });
     }
+
 };
 
 
 let API_KEY = '3534a47c-f615-488a-ac2b-1cbb3a5481ee';
-let url = `https://content.guardianapis.com/search?lang=en&q=ukraine&api-key=${API_KEY}&page-size=20&page=`;
+let url = `https://content.guardianapis.com/search?lang=en&q=ukraine&api-key=${API_KEY}&page-size=5&page=`;
 
 
 new News(url).init();
