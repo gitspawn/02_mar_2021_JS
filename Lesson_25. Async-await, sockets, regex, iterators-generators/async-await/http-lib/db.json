@@ -1,0 +1,42 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Ukrainian news"
+    },
+    {
+      "title": "China news!!!!",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "title": "USA news"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "title": "Good news"
+    },
+    {
+      "id": 2,
+      "title": "Bad news"
+    },
+    {
+      "id": 3,
+      "title": "Exelent news"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Vova",
+      "email": "vova@i.ua"
+    },
+    {
+      "id": 2,
+      "name": "Sara",
+      "email": "sara@i.ua"
+    }
+  ]
+}
