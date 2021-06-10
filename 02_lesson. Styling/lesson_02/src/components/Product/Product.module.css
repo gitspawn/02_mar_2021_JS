@@ -1,0 +1,22 @@
+@value c-blue, c-red, c-green from '../../variables.module.css';
+
+.container {
+  background-color: gray;
+}
+
+.name {
+  font-weight: 600;
+  color: blue;
+}
+
+.qty {
+  font-weight: 600;
+}
+
+.awailable {
+  color: c-blue;
+}
+
+.notAwailable {
+  color: c-red;
+}

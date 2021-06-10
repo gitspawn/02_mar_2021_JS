@@ -1,0 +1,20 @@
+.Product34 {
+  background-color: gray;
+}
+
+.Product__name {
+  font-weight: 600;
+  color: blue;
+}
+
+.Product__qty {
+  font-weight: 600;
+}
+
+.Product__qty.awailable {
+  color: green;
+}
+
+.Product__qty.not-awailable {
+  color: red;
+}
