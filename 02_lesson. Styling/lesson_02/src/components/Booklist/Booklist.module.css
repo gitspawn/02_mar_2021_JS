@@ -1,0 +1,20 @@
+.container {
+  background-color: yellow;
+}
+
+.name {
+  font-weight: 600;
+  color: blue;
+}
+
+.qty {
+  font-weight: 600;
+}
+
+.awailable {
+  color: green;
+}
+
+.not-awailable {
+  color: red;
+}
