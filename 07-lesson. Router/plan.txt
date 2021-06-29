@@ -2,7 +2,18 @@
 
 
 #Структура URL-строки
+
+
+
+
 https://site.com/author/b45erlz?category=adventure&status=unread#comments
+
+https://site.com/ - origin
+author/b45erlz - pathname
+?category=adventure&status=unread - query string
+#comments - hash
+
+
 -https:// - протокол
 -site.com/ - хост
 -author/b45erlz - путь, то где мы находимся в приложении, где: author - статический параметр, b45erlz - динамический параметр

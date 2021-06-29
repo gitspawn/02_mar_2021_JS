@@ -1,5 +1,6 @@
 import React from "react";
 import imagePath from "../assets/pusheen.jpg";
+import { Link } from "react-router-dom";
 
 let styles = {
     container: {
@@ -20,6 +21,10 @@ export default function NotFound() {
             <h1 style={styles.status}>404</h1>
             {console.log(imagePath)}
             <img src={imagePath} alt="404 page" width="400" />
+            <p>
+                Такой страниці не существует. Вернуться{" "}
+                <Link to="/">на главную</Link>
+            </p>
         </div>
     );
 }
