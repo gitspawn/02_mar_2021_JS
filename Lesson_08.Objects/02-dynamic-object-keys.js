@@ -1,14 +1,14 @@
 let bmw = {
-  model: 'x6',
-  power: 300,
-  price: 60000
-}
+    model: "x6",
+    power: 300,
+    price: 60000,
+};
 
 let audi = {
-  model: 'a4',
-  power: 200,
-  price: 35000
-}
+    model: "a4",
+    power: 200,
+    price: 35000,
+};
 
 // console.log(bmw.price)
 // bmw.price = 75000
@@ -20,40 +20,44 @@ let audi = {
 // console.log(bmwPrice)
 // console.log(audiPrice)
 
-
-// function userInpurHandler(name, value) {
-//   let obj = {
-//     [name]: value
-//   }
-//   return obj
+// function inputHandler(value, name) {
+//     const obj = {
+//         [name]: value
+//     }
+//     return obj;
 // }
 
-// let passObj = userInpurHandler('vova', 1234);
-// let emailObj = userInpurHandler('sara', 'sara@i.ua')
-// let loginObj = userInpurHandler('Mike', 'Mike1995')
+// let passwordObj = inputHandler('skfhsdkhfs', 'password');
+// let userObj  = inputHandler('user@gmail.com', 'email');
+// let loginObj =  inputHandler('user', 'login');
 
-// console.log(passObj)
-// console.log(emailObj)
-// console.log(loginObj)
+// console.log(passwordObj);
+// console.log(userObj);
+// console.log(loginObj);
 
+// const user = {
+//     password : passwordObj,
+//     user: userObj,
+//     login: loginObj
+// }
 
-let country = ['usa', 'china', 'russia', 'india']
-let vakcine = ['Moderna', 'Sinovac', 'Sputnic V', 'Covishield']
+// console.log(user);
+
+let country = ["usa", "china", "russia", "india"];
+let vakcine = ["Moderna", "Sinovac", "Sputnic V", "Covishield"];
 
 // let vac = {
 //   usa: 'Moderna',
 //   china: 'Sinovac'
 // }
 
-
-
 function createVacObj(arrKeys, assValues) {
-  let result = {};
-  for (let i = 0; i < arrKeys.length; i += 1) {
-    result[arrKeys[i]] = assValues[i]
-  }
-  return result;
+    let result = {};
+    for (let i = 0; i < arrKeys.length; i += 1) {
+        result[arrKeys[i]] = assValues[i];
+    }
+    return result;
 }
 
-let vakcineData = createVacObj(country, vakcine)
-console.log(vakcineData)
+let vakcineData = createVacObj(country, vakcine);
+console.log(vakcineData);
