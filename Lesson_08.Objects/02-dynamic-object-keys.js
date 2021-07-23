@@ -20,28 +20,32 @@ let audi = {
 // console.log(bmwPrice)
 // console.log(audiPrice)
 
-// function inputHandler(value, name) {
-//     const obj = {
-//         [name]: value
-//     }
-//     return obj;
-// }
+// Dynamic add prop to object
+/*
+function inputHandler(value, name) {
+    const obj = {
+        [name]: value
+    }
+    return obj;
+}
 
-// let passwordObj = inputHandler('skfhsdkhfs', 'password');
-// let userObj  = inputHandler('user@gmail.com', 'email');
-// let loginObj =  inputHandler('user', 'login');
+let passwordObj = inputHandler('skfhsdkhfs', 'password');
+let userObj  = inputHandler('user@gmail.com', 'email');
+let loginObj =  inputHandler('user', 'login');
 
-// console.log(passwordObj);
-// console.log(userObj);
-// console.log(loginObj);
+console.log(passwordObj);
+console.log(userObj);
+console.log(loginObj);
 
-// const user = {
-//     password : passwordObj,
-//     user: userObj,
-//     login: loginObj
-// }
+const user = {
+    password : passwordObj,
+    user: userObj,
+    login: loginObj
+}
 
-// console.log(user);
+console.log(user);
+
+*/
 
 let country = ["usa", "china", "russia", "india"];
 let vakcine = ["Moderna", "Sinovac", "Sputnic V", "Covishield"];
