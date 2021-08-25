@@ -5,7 +5,10 @@ import * as timerActions from "../../redux/timerActions";
 function StepSelector({ options, step, onChangeStep }) {
     return (
         <label>
-            <select onChange={(event) => onChangeStep(event.target.value)}>
+            <select
+                value={step}
+                onChange={(event) => onChangeStep(event.target.value)}
+            >
                 {options.map((option) => (
                     <option key={option} value={option}>
                         {option}
